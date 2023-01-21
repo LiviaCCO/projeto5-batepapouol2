@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="reset.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Bate-Papo UOL</title>
+</head>
+<body>
+    <div class="telaEntrada escondido">
+        <img src="logo.png">
+        <input type="nome" placeholder="Digite seu nome">
+        <button type="button">Entrar</button>
+    </div>
+    <div class="sidebarAll escondido">
+        <div class="transparencia"></div>
+        <div class="sidebar">
+            <div class="contato">Escolha um contato para enviar mensagem:</div>
+            <div class="opcao">
+                <ion-icon name="people"></ion-icon>
+                <div class="pessoa">Todos</div>
+            </div>
+            <div class="opcao">
+                <ion-icon name="person-circle"></ion-icon>
+                <div class="pessoa">João</div>
+            </div>
+            <div class="opcao">
+                <ion-icon name="person-circle"></ion-icon>
+                <div class="pessoa">Maria</div>
+            </div>
+            <div class="visibilidade">Escolha a visibilidade:</div>
+            <div class="opcao">
+                <ion-icon name="lock-open"></ion-icon>
+                <div class="pessoa">Púlico</div>
+            </div>
+            <div class="opcao">
+                <ion-icon name="lock-closed"></ion-icon>
+                <div class="pessoa">Reseradamente</div>
+            </div>
+                        
+        </div>
+    </div>
+    <div class="topo">
+        <img src="logo.png">
+        <ion-icon name="people"></ion-icon>
+    </div>
+    <ul class="chat">
+        <li class="post status">
+            <span style="color:#AAAAAA">(09:21:45)</span> <span style="font-weight:bold"> João </span> entra na sala...
+        </li>
+        <li class="post normal">
+            <span style="color:#AAAAAA">(09:22:28)</span> <span style="font-weight:bold"> João </span> para <span style="font-weight:bold"> todos</span>: Bom dia
+        </li>
+        <li class="post normal"> 
+            <span style="color:#AAAAAA">(09:22:38)</span> <span style="font-weight:bold"> Maria </span> para <span style="font-weight:bold"> João</span>: Oi João :)
+        </li>
+        <li class="post reservado"> 
+            <span style="color:#AAAAAA">(09:22:48)</span> <span style="font-weight:bold"> João </span> reservadamente para <span style="font-weight:bold"> Maria</span>: Oi gatinha quer tc?
+        </li>
+        <li class="post status">
+            <span style="color:#AAAAAA">(09:22:58)</span> <span style="font-weight:bold"> Maria </span> sai da sala...
+        </li>
+    </ul>
+    <div class="msg">
+        <input type="msg" id="text" placeholder="Escreva aqui...">
+        
+        <ion-icon name="paper-plane"></ion-icon>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="script.js"></script>
+        
+</body>
+</html>
