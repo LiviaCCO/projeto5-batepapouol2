@@ -13,68 +13,63 @@
     <title>Bate-Papo UOL</title>
 </head>
 <body>
-    <div class="telaEntrada escondido">
+    <div class="telaEntrada">
         <img src="logo.png">
-        <input type="nome" placeholder="Digite seu nome">
-        <button type="button">Entrar</button>
+        <input id="name" type="nome" placeholder="Digite seu nome">
+        <button onclick="nomeUsuario()" type="button">Entrar</button>
     </div>
     <div class="sidebarAll escondido">
-        <div class="transparencia"></div>
+        <div onclick="sidebar()" class="transparencia"></div>
         <div class="sidebar">
             <div class="contato">Escolha um contato para enviar mensagem:</div>
-            <div class="opcao">
-                <ion-icon name="people"></ion-icon>
-                <div class="pessoa">Todos</div>
-            </div>
-            <div class="opcao">
-                <ion-icon name="person-circle"></ion-icon>
-                <div class="pessoa">João</div>
-            </div>
-            <div class="opcao">
-                <ion-icon name="person-circle"></ion-icon>
-                <div class="pessoa">Maria</div>
-            </div>
+            <ul class="listaParticipantes">
+                <li class="opcao1">
+                    <ion-icon name="people"></ion-icon>
+                    <div class="pessoa">Todos</div>
+                </li>
+                <li class="opcao1">
+                    <ion-icon name="person-circle"></ion-icon>
+                    <div class="pessoa">João</div>
+                </li>
+            </ul>
+            
             <div class="visibilidade">Escolha a visibilidade:</div>
-            <div class="opcao">
-                <ion-icon name="lock-open"></ion-icon>
-                <div class="pessoa">Púlico</div>
-            </div>
-            <div class="opcao">
-                <ion-icon name="lock-closed"></ion-icon>
-                <div class="pessoa">Reseradamente</div>
-            </div>
+            <ul>
+                <li data-test="public" class="opcao2" onclick="visibilidade(this)">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <div class="nome">Público
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                    </div>
+                </li>
+                <li data-test="private" class="opcao2" onclick="visibilidade(this)">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <div class="nome">Reservadamente
+                        <ion-icon class="opacity" name="checkmark-outline"></ion-icon>
+                    </div>
+                </li>
+            </ul>
                         
         </div>
     </div>
     <div class="topo">
         <img src="logo.png">
-        <ion-icon name="people"></ion-icon>
+        <ion-icon onclick="sidebar()" data-test="open-participants" name="people"></ion-icon>
     </div>
     <ul class="chat">
-        <li class="post status">
-            <span style="color:#AAAAAA">(09:21:45)</span> <span style="font-weight:bold"> João </span> entra na sala...
-        </li>
-        <li class="post normal">
-            <span style="color:#AAAAAA">(09:22:28)</span> <span style="font-weight:bold"> João </span> para <span style="font-weight:bold"> todos</span>: Bom dia
-        </li>
-        <li class="post normal"> 
-            <span style="color:#AAAAAA">(09:22:38)</span> <span style="font-weight:bold"> Maria </span> para <span style="font-weight:bold"> João</span>: Oi João :)
-        </li>
-        <li class="post reservado"> 
-            <span style="color:#AAAAAA">(09:22:48)</span> <span style="font-weight:bold"> João </span> reservadamente para <span style="font-weight:bold"> Maria</span>: Oi gatinha quer tc?
-        </li>
-        <li class="post status">
-            <span style="color:#AAAAAA">(09:22:58)</span> <span style="font-weight:bold"> Maria </span> sai da sala...
-        </li>
-    </ul>
-    <div class="msg">
-        <input type="msg" id="text" placeholder="Escreva aqui...">
+      
         
-        <ion-icon name="paper-plane"></ion-icon>
+    </ul>
+    <div class="barra">
+        <div class="msg">
+            <input data-test="input-message" type="msg" id="text" placeholder="Escreva aqui..." >
+            <div class="detalhes">Enviando para Todos (Público)</div>
+        </div>
+        <ion-icon onclick="enviarMsg()" data-test="send-message" id="icon" name="paper-plane-outline"></ion-icon>    
     </div>
 
-
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script> -->
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

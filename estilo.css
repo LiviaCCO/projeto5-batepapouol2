@@ -16,8 +16,6 @@ body {
     background:#FFFFFF;
 }
 
-
-
 .telaEntrada img{
     width: 130px;
     height: 92px;
@@ -71,6 +69,28 @@ button{
     top: -1px;
     background: #FFFFFF;
 }
+.opcao1 ion-icon, 
+.opcao2 ion-icon {
+    margin-right: 8px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.nome ion-icon{
+    color: #28BB25;
+    font-size: 15px;
+    /* opacity: 1; */
+}
+.nome{
+    width: 194px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listaParticipantes{
+    overflow-y: scroll;
+    word-break: break-all;
+}
 .contato,
 .visibilidade {
     width: 259px;
@@ -87,8 +107,9 @@ button{
     color: #000000;
     padding: 20px;
 }
-.opcao{
-    width: 1259px;
+.opcao1,
+.opcao2{
+    /* width: 1259px; */
     height: 36px;
     font-style: normal;
     font-weight: 400;
@@ -98,7 +119,13 @@ button{
     align-items: center;
     padding: 18px;
     color: #000000;
+    word-break: break-all;
+       
 }
+.nome{
+    word-break: break-all;
+}
+
 .topo{
     display: flex;
     justify-content: space-between;
@@ -121,9 +148,9 @@ button{
 }
 
 .topo ion-icon{
-    min-width: 42px;
-    min-height: 31px; 
-    /* font-size: 35px; */
+    /* min-width: 42px;
+    min-height: 31px;  */
+    font-size: 35px;
     
 }  
 .chat{
@@ -131,7 +158,8 @@ button{
     margin-top: 106px;
     margin-bottom: 90px;
     align-items: center;
-    overflow: auto;
+    /* overflow: auto; */
+    overflow-y: scroll;
     
 }
 .post{
@@ -140,6 +168,8 @@ button{
     border-radius: 2px;
     padding: 10px 8px;
     line-height: 1.6;
+    word-break: break-all;
+
 }
 .status{
     background: #DCDCDC;
@@ -150,7 +180,7 @@ button{
 .reservado{
     background: #FFDEDE;
 }
-.msg{
+.barra{
     position: fixed;
     width: 100%;
     height: 80px;
@@ -165,7 +195,7 @@ button{
     padding-right: 18px;
 }
 input{
-    width: 145px;
+    width: 80%;
     height: 30px;
     font-weight: 400;
     font-size: 18px;
@@ -176,17 +206,29 @@ input{
     /* box-shadow: none; */
     border: none; 
     outline: none;
+    word-break: break-all;
 }
 #text::placeholder {
     font-style: italic;
 }
-.msg ion-icon{
+.barra ion-icon{
     width: 26px;
     height: 26px;
-    color: red;
-    z-index: 1;
 } 
-
+.msg{
+    display: flex;
+    flex-direction: column;
+}
+.detalhes{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 25px;
+    color: #505050;
+}
 .escondido{
     display:none;
+}
+
+.opacity{
+    opacity: 0;
 }
