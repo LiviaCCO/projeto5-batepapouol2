@@ -2,6 +2,7 @@ let nome = {};
 let mensagem=[];
 let usuario;
 let pessoasChat=[];
+let para;
 
 
 // entrando na sala
@@ -207,4 +208,14 @@ function conversar(resposta){
         </li>
         `
     }
+}
+
+function contato(escolhido){
+    console.log(escolhido);
+    const icon = escolhido.parentNode.querySelectorAll("ion-icon")
+    console.log(icon)
+    icon.classList.add('opacity');
+    escolhido.querySelector("ion-icon").classList.remove('opacity');
+    para = escolhido.querySelector(".nome").innerHTML;
+    console.log(para);
 }
