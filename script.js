@@ -190,7 +190,7 @@ function conversar(resposta){
     <li data-test="all" class="opcao1" onclick="contato(this)">
         <ion-icon name="people"></ion-icon>
         <div class="nome">Todos
-            <ion-icon name="checkmark-outline"></ion-icon>
+            <ion-icon class="visivel" data-test="check" name="checkmark-outline"></ion-icon>
         </div>
         
     </li>
@@ -203,19 +203,19 @@ function conversar(resposta){
         <li data-test="participant" class="opcao1" onclick="contato(this)">
             <ion-icon name="person-circle"></ion-icon>
             <div class="nome">${lista[i].name}
-                <ion-icon class="opacity" name="checkmark-outline"></ion-icon>
+                <ion-icon class="opacity" data-test="check" name="checkmark-outline"></ion-icon>
             </div>
         </li>
         `
     }
 }
 
-function contato(escolhido){
+/* function contato(escolhido){
     console.log(escolhido);
-    const icon = escolhido.parentNode.querySelectorAll("ion-icon")
+    const icon = document.querySelector(".opcao1 .visivel");
     console.log(icon)
     icon.classList.add('opacity');
-    escolhido.querySelector("ion-icon").classList.remove('opacity');
-    para = escolhido.querySelector(".nome").innerHTML;
+    const esc = escolhido.querySelector("ion-icon").classList.remove('opacity');
+    para = esc.innerHTML;
     console.log(para);
-}
+} */

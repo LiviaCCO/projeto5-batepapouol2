@@ -15,8 +15,8 @@
 <body>
     <div class="telaEntrada">
         <img src="logo.png">
-        <input id="name" type="nome" placeholder="Digite seu nome">
-        <button onclick="nomeUsuario()" type="button">Entrar</button>
+        <input data-test="input-name" id="name" type="nome" placeholder="Digite seu nome">
+        <button data-test="send-name" onclick="nomeUsuario()" type="button">Entrar</button>
     </div>
     <div class="sidebarAll escondido">
         <div onclick="sidebar()" class="transparencia"></div>
@@ -38,13 +38,13 @@
                 <li data-test="public" class="opcao2" onclick="visibilidade(this)">
                     <ion-icon name="lock-open"></ion-icon>
                     <div class="nome">Público
-                        <ion-icon name="checkmark-outline"></ion-icon>
+                        <ion-icon data-test="check" name="checkmark-outline"></ion-icon>
                     </div>
                 </li>
                 <li data-test="private" class="opcao2" onclick="visibilidade(this)">
                     <ion-icon name="lock-closed"></ion-icon>
                     <div class="nome">Reservadamente
-                        <ion-icon class="opacity" name="checkmark-outline"></ion-icon>
+                        <ion-icon class="opacity" data-test="check" name="checkmark-outline"></ion-icon>
                     </div>
                 </li>
             </ul>
@@ -62,7 +62,7 @@
     <div class="barra">
         <div class="msg">
             <input data-test="input-message" type="msg" id="text" placeholder="Escreva aqui..." >
-            <div class="detalhes">Enviando para Todos (Público)</div>
+            <div  data-test="recipient" class="detalhes">Enviando para Todos (Público)</div>
         </div>
         <ion-icon onclick="enviarMsg()" data-test="send-message" id="icon" name="paper-plane-outline"></ion-icon>    
     </div>
